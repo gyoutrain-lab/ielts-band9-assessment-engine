@@ -1,0 +1,10 @@
+{
+  "Nursing": [
+    {"baseline": "I help the patient with their meds.", "target": "Facilitation of medication administration is performed to ensure patient safety."},
+    {"baseline": "The nurse checks the wound.", "target": "Wound integrity assessment is conducted to monitor healing progress."}
+  ],
+  "Hospitality": [
+    {"baseline": "I help the guest with their bags.", "target": "Assistance with luggage conveyance is provided to ensure guest convenience."},
+    {"baseline": "I fix the room for the guest.", "target": "Refinement of guest accommodation is executed to meet service standards."}
+  ]
+}
