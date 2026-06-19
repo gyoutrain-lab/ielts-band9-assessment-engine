@@ -1,24 +1,24 @@
 import streamlit as st
 import json
 
-# Load data
+# Setup
+st.set_page_config(page_title="Pro-English Engine", page_icon="🌐", layout="wide")
+
+# Sidebar - Professional Control Panel
+st.sidebar.title("Configuration")
+domain = st.sidebar.selectbox("Industry Domain", ["Nursing", "Hospitality"])
 with open("curriculum_data.json", "r") as f:
     data = json.load(f)
 
-st.set_page_config(page_title="Pro-English Engine", layout="centered")
-st.title("🎓 Professional Proficiency Engine")
+# Main Dashboard
+st.title(f"🌐 {domain} Professional Proficiency Engine")
+st.markdown("---")
 
-domain = st.sidebar.selectbox("Select Domain", ["Nursing", "Hospitality"])
-question = st.sidebar.radio("Select Test Item", range(len(data[domain])))
-
-item = data[domain][question]
-
-st.subheader(f"{domain} Assessment")
-st.write(f"**Baseline:** {item['baseline']}")
-
-user_answer = st.text_input("Your Band 9 Transformation:")
-
-if st.button("Submit & Analyze"):
-    # Simple logic: compare against target keywords
-    st.success(f"Target Structure: {item['target']}")
-    st.info("Your response is being evaluated for nominalization and thematic fronting.")
+for category, content in data[domain].items():
+    with st.expander(f"Review: {category.replace('_', ' ')}"):
+        st.write(f"**Baseline Prompt:** {content['baseline']}")
+        user_input = st.text_area(f"Your Transformation for {category}:", key=category)
+        
+        if st.button("Evaluate", key=f"btn_{category}"):
+            st.success(f"Professional Standard: {content['target']}")
+            st.warning("Note: Analyze your response for Nominalization and Thematic Fronting.")
