@@ -1,10 +1,22 @@
 {
-  "Nursing": [
-    {"baseline": "I help the patient with their meds.", "target": "Facilitation of medication administration is performed to ensure patient safety."},
-    {"baseline": "The nurse checks the wound.", "target": "Wound integrity assessment is conducted to monitor healing progress."}
-  ],
-  "Hospitality": [
-    {"baseline": "I help the guest with their bags.", "target": "Assistance with luggage conveyance is provided to ensure guest convenience."},
-    {"baseline": "I fix the room for the guest.", "target": "Refinement of guest accommodation is executed to meet service standards."}
-  ]
+  "Nursing": {
+    "SBAR_Reporting": {
+      "baseline": "The patient's blood pressure is going up fast.",
+      "target": "Clinical observation indicates a rapid escalation in systolic blood pressure; immediate pharmacological intervention is recommended."
+    },
+    "Patient_Safety": {
+      "baseline": "I make sure the floor is dry to stop falls.",
+      "target": "Implementation of environmental hazard mitigation protocols is mandatory to prevent fall-related adverse events."
+    }
+  },
+  "Hospitality": {
+    "Service_Recovery": {
+      "baseline": "I am sorry, I will fix your cabin problem now.",
+      "target": "Please accept my apologies for the cabin facility oversight; I am currently facilitating a rectification to ensure your comfort is restored."
+    },
+    "Anticipatory_Service": {
+      "baseline": "Do you need anything else for your trip?",
+      "target": "May I provide further assistance to ensure your voyage experience remains seamless and exceeds your expectations?"
+    }
+  }
 }
